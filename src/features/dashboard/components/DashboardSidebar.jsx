@@ -177,7 +177,7 @@ export function DashboardSidebar({ open, onClose }) {
 
       <aside
         className={cn(
-          'fixed inset-y-0 left-0 z-50 flex h-dvh w-72 flex-col bg-transparent p-6 transition-transform duration-250 lg:w-64',
+          'fixed inset-y-0 left-0 z-50 flex h-dvh w-72 flex-col border-r border-gray-200 bg-white p-6 transition-transform duration-250 lg:w-64',
           open ? 'translate-x-0' : '-translate-x-full lg:translate-x-0',
         )}
       >
