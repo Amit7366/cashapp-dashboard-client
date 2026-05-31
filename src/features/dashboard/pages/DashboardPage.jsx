@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { CreateQrPaymentCard } from '@/features/dashboard/components/CreateQrPaymentCard'
 import { MyTransactionsCard } from '@/features/dashboard/components/MyTransactionsCard'
 import { PaymentLinkQrModal } from '@/features/dashboard/components/PaymentLinkQrModal'
+import { PaymentLinksCard } from '@/features/dashboard/components/PaymentLinksCard'
 
 const STATS = [
   { label: 'AVAILABLE MY BALANCE', value: '$225.00' },
@@ -36,6 +38,11 @@ export function DashboardPage() {
             </p>
           </article>
         ))}
+      </div>
+
+      <div className="mb-6 grid grid-cols-1 gap-6 xl:grid-cols-2">
+        <CreateQrPaymentCard />
+        <PaymentLinksCard onShowQr={setActiveQrUrl} />
       </div>
 
       <MyTransactionsCard onShowQr={setActiveQrUrl} />
